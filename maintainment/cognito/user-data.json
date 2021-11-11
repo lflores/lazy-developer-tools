@@ -1,0 +1,13 @@
+{
+    "AuthParameters": {
+        "USERNAME": "yulietsosa",
+        "PASSWORD": "Test12345",
+        "SECRET_HASH": "jc3bB/ibXuBOZV5AKXb0OaEHweFqzRjW6gzYjRiM8b0=",
+        "_USERNAME": "Camilo.Avila@evertecinc.com",
+        "_PASSWORD": "Test12345",
+        "_SECRET_HASH": "OoYbwHmZryMf/vrn4SsYHnimflGkGD52ggyDxQbbJX0="
+    },
+    "AuthFlow": "USER_PASSWORD_AUTH",
+    "_ClientId": "23eochu8gnf26d5ubcf7uons1g",
+    "ClientId": "1t8baagop1eko7mes0qd1bs11b"
+}

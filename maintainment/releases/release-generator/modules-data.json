@@ -1,0 +1,91 @@
+[{
+        "name": "bcpr-cloud-cdk-application",
+        "description": "",
+        "parentFolder": "infra",
+        "layer": "cloud",
+        "versionType": "package"
+    },
+    {
+        "name": "bcpr-cloud-cdk-infrastructure",
+        "description": "",
+        "parentFolder": "infra",
+        "layer": "cloud",
+        "versionType": "package"
+    },
+    {
+        "name": "bcpr-dev-sso",
+        "description": "",
+        "parentFolder": "infra",
+        "layer": "cloud",
+        "versionType": "package"
+    },
+    {
+        "name": "bcpr-cloud-cdk-lambdas",
+        "description": "",
+        "parentFolder": "infra",
+        "layer": "cloud",
+        "versionType": "package"
+    },
+    {
+        "name": "bcpr-cloud-cdk-api",
+        "description": "",
+        "parentFolder": "backend",
+        "layer": "backend",
+        "versionType": "package"
+    },
+    {
+        "name": "bcpr-cloud-cdk-core",
+        "description": "",
+        "parentFolder": "infra",
+        "layer": "cloud",
+        "versionType": "package"
+    },
+    {
+        "name": "bcpr-cloud-cdk-network",
+        "description": "",
+        "parentFolder": "infra",
+        "layer": "cloud",
+        "versionType": "package"
+    },
+    {
+        "name": "bcpr-testing-automation-framework",
+        "description": "",
+        "parentFolder": "backend",
+        "layer": "qa",
+        "versionType": "maven"
+    },
+    {
+        "name": "middleware-banking-api-documentation",
+        "description": "",
+        "parentFolder": "backend",
+        "layer": "backend",
+        "versionType": "package"
+    },
+    {
+        "name": "bcpr-mobile",
+        "description": "",
+        "parentFolder": "frontend",
+        "layer": "frontend"
+    },
+    {
+        "name": "bcpr-notification-service-quarkus",
+        "description": "",
+        "parentFolder": "backend",
+        "layer": "backend",
+        "versionType": "maven"
+    },
+    {
+        "name": "bcpr-middleware-server",
+        "description": "",
+        "parentFolder": "infra",
+        "layer": "backend",
+        "versionType": "maven"
+    },
+    {
+        "name": "bcpr-documentation",
+        "description": "",
+        "parentFolder": "backend",
+        "layer": "all",
+        "versionType": "package"
+    }
+]

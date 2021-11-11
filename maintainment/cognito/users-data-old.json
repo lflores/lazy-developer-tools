@@ -1,0 +1,34 @@
+[{
+        "username": "Yuliet.Sosa@evertecinc.com",
+        "password": "Test12345",
+        "email": "Yuliet.Sosa@evertecinc.com",
+        "phone": "+541164541135",
+        "name": "Yuliet",
+        "lastname": "Sosa",
+        "group": "admins-group",
+        "ssn": "1234567890",
+        "customerType": "0"
+    },
+    {
+        "username": "Camilo.Avila@evertecinc.com",
+        "password": "Test12345",
+        "email": "Camilo.Avila@evertecinc.com",
+        "phone": "+541164541136",
+        "name": "Camilo",
+        "lastname": "Avila",
+        "group": "users-group",
+        "ssn": "234567890",
+        "customerType": "0"
+    },
+    {
+        "username": "Leonardo.Flores@evertecinc.com",
+        "password": "Test12345",
+        "email": "Leonardo.Flores@evertecinc.com",
+        "phone": "+541164541137",
+        "name": "Leonardo",
+        "lastname": "Flores",
+        "group": "admins-group",
+        "ssn": "345678901",
+        "customerType": "1"
+    }
+]

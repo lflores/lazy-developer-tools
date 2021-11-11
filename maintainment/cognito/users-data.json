@@ -1,0 +1,100 @@
+[{
+        "username": "yulietsosa",
+        "password": "Test12345",
+        "email": "Yuliet.Sosa@evertecinc.com",
+        "phone": "+541164541135",
+        "name": "Yuliet",
+        "lastname": "Sosa",
+        "group": "admins-group",
+        "ssn": "345645611",
+        "customerType": "0"
+    },
+    {
+        "username": "camiloavila",
+        "password": "Test12345",
+        "email": "Camilo.Avila@evertecinc.com",
+        "phone": "+541164541136",
+        "name": "Camilo",
+        "lastname": "Avila",
+        "group": "users-group",
+        "ssn": "345634657",
+        "customerType": "0"
+    },
+    {
+        "username": "leonardoflores",
+        "password": "Test12345",
+        "email": "Leonardo.Flores@evertecinc.com",
+        "phone": "+541164541137",
+        "name": "Leonardo",
+        "lastname": "Flores",
+        "group": "admins-group",
+        "ssn": "345678901",
+        "customerType": "0"
+    },
+    {
+        "username": "enriquecordero",
+        "password": "Test54321",
+        "email": "Enrique.Cordero@evertecinc.com",
+        "phone": "+541164541138",
+        "name": "Enrique",
+        "lastname": "Cordero",
+        "group": "users-group",
+        "ssn": "345645123",
+        "customerType": "0"
+    },
+    {
+        "username": "facundovillalba",
+        "password": "Test12345",
+        "email": "Facundo.Villalba@evertecinc.com",
+        "phone": "+541164541139",
+        "name": "Facundo",
+        "lastname": "Villalba",
+        "group": "users-group",
+        "ssn": "34561127",
+        "customerType": "0"
+    },
+    {
+        "username": "simonfermo",
+        "password": "Test12345",
+        "email": "Simon.Fermo@evertecinc.com",
+        "phone": "+541164541140",
+        "name": "Simon",
+        "lastname": "Fermo",
+        "group": "users-group",
+        "ssn": "545787961",
+        "customerType": "0"
+    },
+    {
+        "username": "luisB",
+        "password": "Test12345",
+        "email": "Luis.Irchenz@evertecinc.com",
+        "phone": "+541164541141",
+        "name": "Luis",
+        "lastname": "Birchenz",
+        "group": "users-group",
+        "ssn": "345645611",
+        "customerType": "0"
+    },
+    {
+        "username": "pedrocardona",
+        "password": "Test12345",
+        "email": "Pedro.Cardona@evertecinc.com",
+        "phone": "+541164541240",
+        "name": "Pedro",
+        "lastname": "Cardona",
+        "group": "users-group",
+        "ssn": "3451237",
+        "customerType": "0"
+    },
+    {
+        "username": "rosanacespedes",
+        "password": "Test12345",
+        "email": "Rosana.Cespedes@evertecinc.com",
+        "phone": "+541164541241",
+        "name": "Rosana",
+        "lastname": "Cespedes",
+        "group": "users-group",
+        "ssn": "34564567",
+        "customerType": "0"
+    }
+]

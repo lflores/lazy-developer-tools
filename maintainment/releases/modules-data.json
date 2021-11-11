@@ -1,0 +1,21 @@
+[{
+        "name": "bcpr-cloud-cdk-application",
+        "description": "",
+        "rootFolder": ""
+    },
+    {
+        "name": "bcpr-cloud-cdk-infrastructure",
+        "description": "",
+        "rootFolder": ""
+    },
+    {
+        "name": "bcpr-cloud-cdk-lambdas",
+        "description": "",
+        "rootFolder": ""
+    },
+    {
+        "name": "bcpr-cloud-cdk-api",
+        "description": "",
+        "rootFolder": "backend"
+    }
+]
