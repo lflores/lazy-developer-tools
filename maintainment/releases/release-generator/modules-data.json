@@ -65,7 +65,8 @@
         "name": "bcpr-mobile",
         "description": "",
         "parentFolder": "frontend",
-        "layer": "frontend"
+        "layer": "frontend",
+        "versionType": "pubspec"
     },
     {
         "name": "bcpr-notification-service-quarkus",
