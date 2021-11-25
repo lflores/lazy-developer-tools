@@ -18,11 +18,10 @@ release_module() {
         VERSION=$(get_package_version)
     fi
     if [ $3 == true ]; then
-        echo -e "│   └──${LIGHT_BLUE}$1${NC}:${LIGHT_GREEN}$VERSION${NC}"
+        echo -e "│  └── ${LIGHT_BLUE}$1${NC}: ${LIGHT_GREEN}$VERSION${NC}"
     else
-        echo -e "│   ├──${LIGHT_BLUE}$1${NC}:${LIGHT_GREEN}$VERSION${NC}"
+        echo -e "│  ├── ${LIGHT_BLUE}$1${NC}: ${LIGHT_GREEN}$VERSION${NC}"
     fi
-    #echo "is last $3"
 }
 
 search_parent() {
@@ -54,25 +53,28 @@ get_package_version() {
 }
 
 get_flutter_version() {
-    VERSION=$(grep -E 'version:\s([0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}.+)' pubspec.yaml)
-    echo $VERSION
+    VERSION=$(grep -oEi 'version:\s([0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}.+)' pubspec.yaml)
+    #echo $?
+    echo ${VERSION//version:}
 }
 
 if [[ -n $1 ]]; then
     MODULE=$(cat modules-data.json | jq -c ".[] | select( .name | contains(\"$1\"))")
     echo $MODULE
-    cd ../
+    cd ~/workspace/evertec/banco-cooperativo/infra/
     ROOT_FOLDER=$(jq -r '.parentFolder' <<<$MODULE)
     if [ -z "$ROOT_FOLDER" ]; then
         release_module \
             $(jq -r '.name' <<<$MODULE) \
-            $(jq -r '.versionType' <<<$MODULE)
+            $(jq -r '.versionType' <<<$MODULE) \
+            false
     else
         search_parent $ROOT_FOLDER
         cd $(jq -r '.name' <<<$MODULE)
         release_module \
-            $(jq -r '.name' <<<$MODULE) \
-            $(jq -r '.versionType' <<<$MODULE)
+            $(jq -r '.name' <<<$MODULE) \ 
+            $(jq -r '.versionType' <<<$MODULE) \
+            false
     fi
     exit 0
 fi
@@ -110,22 +112,22 @@ print_modules() {
     #echo ${PWD}
 }
 
-echo -e "\n${LIGHT_GREEN}BCPR Mobile${NC}"
+echo -e "\n${LIGHT_GREEN}BCPR Mobile${NC}\n"
 
-echo -e "├─ ${LIGHT_GREEN}All${NC}"
+echo -e "├─ All"
 print_modules "all"
 
-echo -e "├─ ${LIGHT_GREEN}Frontend${NC}"
+echo -e "├─ Frontend"
 print_modules "frontend"
 # echo $(pwd)
 
-echo -e "├─ ${LIGHT_GREEN}Backend${NC}"
+echo -e "├─ Backend"
 print_modules "backend"
 #echo $(pwd)
 
-echo -e "├─ ${LIGHT_GREEN}QA${NC}"
+echo -e "├─ QA"
 print_modules "qa"
 #echo $(pwd)
 
-echo -e "├─ ${LIGHT_GREEN}Cloud${NC}"
+echo -e "├─ Cloud"
 print_modules "cloud"
