@@ -17,15 +17,7 @@ release_module() {
     else
         VERSION=$(get_package_version)
     fi
-
-    echo -e "├──${GREEN}${NC}${LIGHT_GREEN}$1:$VERSION${NC}"
-
-    # npm run build
-    # git checkout develop && git pull
-    # git checkout release && git pull
-    # git merge develop && git commit -m "Merge with develop"
-    # git push
-    # git checkout develop
+    echo -e "|  ├──${LIGHT_GREEN}$1:$VERSION${NC}"
 }
 
 search_parent() {
@@ -38,7 +30,7 @@ search_parent() {
             cd ./$1
         fi
         BASE=$(basename $PWD)
-        echo $BASE
+        #echo -e $BASE
         #if [$COUNTER -gt 10]; then
         #    echo "I search by 10 parents and never found"
         #    break
@@ -57,14 +49,19 @@ get_package_version() {
 }
 
 get_flutter_version() {
-    set -e
-    file=$(cat pubspec.yaml)
-    # BUILD_NAME=$(echo $file | sed -ne 's/[^0-9]*\(\([0-9]\.\)\{0,4\}[0-9][^.]\).*/\1/p')
+    #set -e
+    #file=$(cat pubspec.yaml)
+    #BUILD_NAME=$(echo $file | sed -ne 's/[^#]version: \(\([0-9]\.\)\{0,4\}[0-9][^.]\).*/\1/p')
+    #BUILD_NAME=$(echo $file|grep -E '^version:[\s]+(.*)$')
+    # BUILD_NAME=$(echo $file | grep -oPml '^version:[\s]+(.*)$')
+    #BUILD_NAME=$(echo $file|grep -oPml "version:")
     # BUILD_NUMBER=$(git rev-list HEAD --count)
-    BUILD_NUMBER = $(echo $file | sed -ne 's/^version: (\d+\.?\d+\.?\*|.+)/p')
-    echo "Building version ${BUILD_NAME} ${BUILD_NUMBER}"
-    export BUILD_NAME="$BUILD_NAME"
-    export BUILD_NUMBER="$BUILD_NUMBER"
+    # BUILD_NUMBER = $(echo $file | sed -ne 's/^version: (\d+\.?\d+\.?\*|.+)/p')
+    VERSION=$(grep -E 'version:\s([0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}.+)' pubspec.yaml)
+    # echo ${VERSION}
+    #export BUILD_NAME="$BUILD_NAME"
+    #export BUILD_NUMBER="$BUILD_NUMBER"
+    echo $VERSION
 }
 
 if [[ -n $1 ]]; then
@@ -87,9 +84,11 @@ if [[ -n $1 ]]; then
 fi
 
 print_modules() {
-    #MODULES=$(cat modules-data.json | jq -c ".[] | select( .layer | contains(\"$1\"))")
-    cd ../
-    for MODULE in $1; do
+    PREV=$(pwd)
+    MODULES=$(cat modules-data.json | jq -c ".[] | select( .layer | contains(\"$1\"))")
+    cd ~/workspace/evertec/banco-cooperativo/infra/
+    echo -e "Cantidad de modulos: ${#MODULES[@]}"
+    for MODULE in $MODULES; do
         ROOT_FOLDER=$(jq -r '.parentFolder' <<<$MODULE)
         if [ -z "$ROOT_FOLDER" ]; then
             release_module \
@@ -103,26 +102,24 @@ print_modules() {
                 $(jq -r '.versionType' <<<$MODULE)
         fi
     done
-    search_parent "backend"
-    cd bcpr-documentation/releases
+    cd $PREV
+    #echo ${PWD}
 }
 
-#echo $(cat modules-data.json | jq -c ".[] | select( .layer | contains(\"cloud\"))")
+echo -e "\n${LIGHT_GREEN}All${NC}"
+print_modules "all"
 
-#MODULES=$(cat modules-data.json | jq -c -r '.[]')
-MODULES=$(cat modules-data.json | jq -c ".[] | select( .layer | contains(\"frontend\"))")
-cd ~/workspace/evertec/banco-cooperativo/infra/bcpr-cloud-cdk-application
-echo -e "\nAll"
-print_modules $MODULES
+echo -e "\n${LIGHT_GREEN}Frontend${NC}"
+print_modules "frontend"
 # echo $(pwd)
 
-#echo -e "\nBackend"
-#print_modules "backend"
+echo -e "\n${LIGHT_GREEN}Backend${NC}"
+print_modules "backend"
 #echo $(pwd)
 
-#echo -e "\nQA"
-#print_modules "qa"
+echo -e "\n${LIGHT_GREEN}QA${NC}"
+print_modules "qa"
 #echo $(pwd)
 
-#echo -e "\nCloud"
-#print_modules "cloud"
+echo -e "\n${LIGHT_GREEN}Cloud${NC}"
+print_modules "cloud"
