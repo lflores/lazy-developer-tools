@@ -17,7 +17,12 @@ release_module() {
     else
         VERSION=$(get_package_version)
     fi
-    echo -e "|  ├──${LIGHT_GREEN}$1:$VERSION${NC}"
+    if [ $3 == true ]; then
+        echo -e "│   └──${LIGHT_BLUE}$1${NC}:${LIGHT_GREEN}$VERSION${NC}"
+    else
+        echo -e "│   ├──${LIGHT_BLUE}$1${NC}:${LIGHT_GREEN}$VERSION${NC}"
+    fi
+    #echo "is last $3"
 }
 
 search_parent() {
@@ -49,18 +54,7 @@ get_package_version() {
 }
 
 get_flutter_version() {
-    #set -e
-    #file=$(cat pubspec.yaml)
-    #BUILD_NAME=$(echo $file | sed -ne 's/[^#]version: \(\([0-9]\.\)\{0,4\}[0-9][^.]\).*/\1/p')
-    #BUILD_NAME=$(echo $file|grep -E '^version:[\s]+(.*)$')
-    # BUILD_NAME=$(echo $file | grep -oPml '^version:[\s]+(.*)$')
-    #BUILD_NAME=$(echo $file|grep -oPml "version:")
-    # BUILD_NUMBER=$(git rev-list HEAD --count)
-    # BUILD_NUMBER = $(echo $file | sed -ne 's/^version: (\d+\.?\d+\.?\*|.+)/p')
     VERSION=$(grep -E 'version:\s([0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}.+)' pubspec.yaml)
-    # echo ${VERSION}
-    #export BUILD_NAME="$BUILD_NAME"
-    #export BUILD_NUMBER="$BUILD_NUMBER"
     echo $VERSION
 }
 
@@ -85,41 +79,53 @@ fi
 
 print_modules() {
     PREV=$(pwd)
-    MODULES=$(cat modules-data.json | jq -c ".[] | select( .layer | contains(\"$1\"))")
+    MODULES=$(cat modules-data.json | jq -c "map(select(.layer | contains(\"$1\")))")
+    COUNT=$(echo $MODULES | jq -s '.[] | length')
     cd ~/workspace/evertec/banco-cooperativo/infra/
-    echo -e "Cantidad de modulos: ${#MODULES[@]}"
-    for MODULE in $MODULES; do
+
+    LAST=$(jq -rs '.[][-1].name' <<<$MODULES)
+
+    for MODULE_NAME in $(echo $MODULES | jq -r '.[] | .name'); do
+        IS_LAST=false
+        if [ $MODULE_NAME == $LAST ]; then
+            IS_LAST=true
+        fi
+        MODULE=$(echo $MODULES | jq -r ".[] | select(.name | contains(\"$MODULE_NAME\"))")
         ROOT_FOLDER=$(jq -r '.parentFolder' <<<$MODULE)
         if [ -z "$ROOT_FOLDER" ]; then
             release_module \
                 $(jq -r '.name' <<<$MODULE) \
-                $(jq -r '.versionType' <<<$MODULE)
+                $(jq -r '.versionType' <<<$MODULE) \
+                $IS_LAST
         else
             search_parent $ROOT_FOLDER
             cd $(jq -r '.name' <<<$MODULE)
             release_module \
                 $(jq -r '.name' <<<$MODULE) \
-                $(jq -r '.versionType' <<<$MODULE)
+                $(jq -r '.versionType' <<<$MODULE) \
+                $IS_LAST
         fi
     done
     cd $PREV
     #echo ${PWD}
 }
 
-echo -e "\n${LIGHT_GREEN}All${NC}"
+echo -e "\n${LIGHT_GREEN}BCPR Mobile${NC}"
+
+echo -e "├─ ${LIGHT_GREEN}All${NC}"
 print_modules "all"
 
-echo -e "\n${LIGHT_GREEN}Frontend${NC}"
+echo -e "├─ ${LIGHT_GREEN}Frontend${NC}"
 print_modules "frontend"
 # echo $(pwd)
 
-echo -e "\n${LIGHT_GREEN}Backend${NC}"
+echo -e "├─ ${LIGHT_GREEN}Backend${NC}"
 print_modules "backend"
 #echo $(pwd)
 
-echo -e "\n${LIGHT_GREEN}QA${NC}"
+echo -e "├─ ${LIGHT_GREEN}QA${NC}"
 print_modules "qa"
 #echo $(pwd)
 
-echo -e "\n${LIGHT_GREEN}Cloud${NC}"
+echo -e "├─ ${LIGHT_GREEN}Cloud${NC}"
 print_modules "cloud"
