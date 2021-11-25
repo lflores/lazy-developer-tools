@@ -1,17 +1,17 @@
 [{
         "name": "bcpr-cloud-cdk-application",
         "description": "",
-        "rootFolder": ""
+        "rootFolder": "infra"
     },
     {
         "name": "bcpr-cloud-cdk-infrastructure",
         "description": "",
-        "rootFolder": ""
+        "rootFolder": "infra"
     },
     {
         "name": "bcpr-cloud-cdk-lambdas",
         "description": "",
-        "rootFolder": ""
+        "rootFolder": "infra"
     },
     {
         "name": "bcpr-cloud-cdk-api",

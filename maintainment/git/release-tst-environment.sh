@@ -15,9 +15,9 @@ release_module() {
     # npm run build
     git checkout develop && git pull
     git checkout release && git pull
-    git merge develop && git commit -m "Merge with develop"
-    git push
-    git checkout develop
+    #git merge develop && git commit -m "Merge with develop"
+    #git push
+    #git checkout develop
 }
 
 search_parent() {
@@ -43,7 +43,7 @@ search_parent() {
 if [[ -n $1 ]]; then
     MODULE=$(cat modules-data.json | jq -c ".[] | select( .name | contains(\"$1\"))")
     echo $MODULE
-    cd ../
+    cd ~/workspace/evertec/banco-cooperativo/infra
     ROOT_FOLDER=$(jq -r '.rootFolder' <<<$MODULE)
     if [ -z "$ROOT_FOLDER" ]; then
         release_module \
@@ -59,7 +59,7 @@ fi
 
 MODULES=$(cat modules-data.json | jq -c -r '.[]')
 
-cd ../
+cd ~/workspace/evertec/banco-cooperativo/infra
 for MODULE in $MODULES; do
     ROOT_FOLDER=$(jq -r '.rootFolder' <<<$MODULE)
     if [ -z "$ROOT_FOLDER" ]; then
