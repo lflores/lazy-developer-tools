@@ -1,0 +1,28 @@
+[{
+    "Field": "string",
+    "Values": ["string", ...],
+    "HostHeaderConfig": {
+        "Values": ["string", ...]
+    },
+    "PathPatternConfig": {
+        "Values": ["string", ...]
+    },
+    "HttpHeaderConfig": {
+        "HttpHeaderName": "string",
+        "Values": ["string", ...]
+    },
+    "QueryStringConfig": {
+        "Values": [{
+                "Key": "string",
+                "Value": "string"
+            }
+            ...
+        ]
+    },
+    "HttpRequestMethodConfig": {
+        "Values": ["string", ...]
+    },
+    "SourceIpConfig": {
+        "Values": ["string", ...]
+    }
+}]
