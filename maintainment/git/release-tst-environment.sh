@@ -15,9 +15,9 @@ release_module() {
     # npm run build
     git checkout develop && git pull
     git checkout release && git pull
-    #git merge develop && git commit -m "Merge with develop"
-    #git push
-    #git checkout develop
+    git merge develop && git commit -m "Merge with develop"
+    git push
+    git checkout develop
 }
 
 search_parent() {
