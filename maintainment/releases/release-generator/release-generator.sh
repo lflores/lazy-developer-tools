@@ -8,6 +8,10 @@ YELLOW='\033[1;33m'
 LIGHT_BLUE='\033[1;34m'
 NC='\033[0m' # No Color
 
+PACKAGE_VERSION=0.3.0
+RELEASE_FOLDER=~/workspace/evertec/banco-cooperativo/backend/bcpr-documentation/releases/$PACKAGE_VERSION
+RELEASE_FILE=~/workspace/evertec/banco-cooperativo/backend/bcpr-documentation/releases/Release-$PACKAGE_VERSION.md
+
 release_module() {
     cd ../$1
     if [ $2 == "maven" ]; then
@@ -18,10 +22,22 @@ release_module() {
         VERSION=$(get_package_version)
     fi
     if [ $3 == true ]; then
-        echo -e "│  └── ${LIGHT_BLUE}$1${NC}: ${LIGHT_GREEN}$VERSION${NC}"
+        LINE=$(echo -e "│  └── $1: $VERSION")
+        LINE_SCREEN=$(echo -e "│  └── ${LIGHT_BLUE}$1${NC}: ${LIGHT_GREEN}$VERSION${NC}")
     else
-        echo -e "│  ├── ${LIGHT_BLUE}$1${NC}: ${LIGHT_GREEN}$VERSION${NC}"
+        LINE=$(echo -e "│  ├── $1: $VERSION")
+        LINE_SCREEN=$(echo -e "│  ├── ${LIGHT_BLUE}$1${NC}: ${LIGHT_GREEN}$VERSION${NC}")
     fi
+    echo $LINE_SCREEN
+    echo $LINE >>$RELEASE_FILE
+    make_release_document $1 $VERSION
+}
+
+make_release_document() {
+    if [[ ! -d $RELEASE_FOLDER ]]; then
+        mkdir $RELEASE_FOLDER
+    fi
+    cp ./CHANGELOG.md $RELEASE_FOLDER/$1-$2.md
 }
 
 search_parent() {
@@ -55,7 +71,7 @@ get_package_version() {
 get_flutter_version() {
     VERSION=$(grep -oEi 'version:\s([0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}.+)' pubspec.yaml)
     #echo $?
-    echo ${VERSION//version:}
+    echo ${VERSION//version:/}
 }
 
 if [[ -n $1 ]]; then
@@ -73,7 +89,7 @@ if [[ -n $1 ]]; then
         cd $(jq -r '.name' <<<$MODULE)
         release_module \
             $(jq -r '.name' <<<$MODULE) \ 
-            $(jq -r '.versionType' <<<$MODULE) \
+        $(jq -r '.versionType' <<<$MODULE) \
             false
     fi
     exit 0
@@ -112,22 +128,36 @@ print_modules() {
     #echo ${PWD}
 }
 
-echo -e "\n${LIGHT_GREEN}BCPR Mobile${NC}\n"
+print_tree() {
+    echo "\`\`\`javascript" >> $RELEASE_FILE
+    echo -e "\n${LIGHT_GREEN}BCPR Mobile${NC}"
+    echo "├─ All" >>$RELEASE_FILE
+    print_modules "all"
+    echo "├─ Frontend" >>$RELEASE_FILE
+    print_modules "frontend"
+    # echo $(pwd)
+    echo "├─ Backend" >>$RELEASE_FILE
+    print_modules "backend"
+    #echo $(pwd)
+    echo "├─ QA" >>$RELEASE_FILE
+    print_modules "qa"
+    #echo $(pwd)
+    echo "├─ Cloud" >>$RELEASE_FILE
+    print_modules "cloud"
+    echo "\`\`\`" >>$RELEASE_FILE
+}
 
-echo -e "├─ All"
-print_modules "all"
+echo "# Release $PACKAGE_VERSION" > $RELEASE_FILE
 
-echo -e "├─ Frontend"
-print_modules "frontend"
-# echo $(pwd)
-
-echo -e "├─ Backend"
-print_modules "backend"
-#echo $(pwd)
-
-echo -e "├─ QA"
-print_modules "qa"
-#echo $(pwd)
-
-echo -e "├─ Cloud"
-print_modules "cloud"
+echo -e "\n# Versions tree" >> $RELEASE_FILE
+print_tree
+echo -e "\n# Changelogs" >> $RELEASE_FILE
+for file in $RELEASE_FOLDER/*
+do
+echo $file
+    if [[ -f $file ]]; then
+        #copy stuff ....
+        echo -e "## $(basename $file)" >> $RELEASE_FILE
+        echo -e "[$(basename $file)](./$PACKAGE_VERSION/$(basename $file))" >> $RELEASE_FILE
+    fi
+done
