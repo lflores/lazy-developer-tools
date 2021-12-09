@@ -10,6 +10,17 @@
         "customerType": "0"
     },
     {
+        "username": "yulietwzt6eedu6",
+        "password": "Test12345",
+        "email": "Yuliet.Sosa@evertecinc.com",
+        "phone": "+541164541135",
+        "name": "Yuliet",
+        "lastname": "Sosa",
+        "group": "users-group",
+        "ssn": "345645611",
+        "customerType": "0"
+    },
+    {
         "username": "camiloavila",
         "password": "Test12345",
         "email": "Camilo.Avila@evertecinc.com",
