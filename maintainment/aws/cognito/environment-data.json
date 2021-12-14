@@ -1,9 +1,11 @@
 [{
         "environment": "POC",
         "REGION": "us-east-1",
-        "APP_CLIENT_ID": "4o6g08btq0em0s9u3bkv545h26",
+        "APP_CLIENT_ID": "7kj51rj51i3p8cj38lf9208imm",
+        "_APP_CLIENT_ID": "3db6udd0gp6ujolv5kr9e2j29a",
         "APP_CLIENT_SECRET": "7l6m2fg3ndbvrogcoglaidqtse43qudp4k22h9trhr7jqslvulr",
-        "USERPOOL_ID": "us-east-1_GcImuFBnq"
+        "_USERPOOL_ID": "us-east-1_GcImuFBnq",
+        "USERPOOL_ID": "us-east-1_Nxo4VYqSO"
     },
     {
         "environment": "DEV",

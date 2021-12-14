@@ -26,7 +26,7 @@ login_user() {
 
   aws cognito-idp initiate-auth \
     --auth-flow USER_PASSWORD_AUTH \
-    --auth-parameters USERNAME=$1,PASSWORD=$2,SECRET_HASH=$SECRET_HASH \
+    --auth-parameters USERNAME=$1,PASSWORD=$2 \
     --client-id $3
 }
 $(jq -r '.ResourceTagMappingList[]|select(.ResourceARN | startswith("arn:aws:ecs")).ResourceARN' <<<"$RESOURCES")

@@ -13,13 +13,12 @@ NC='\033[0m' # No Color
 # ==============
 create_user() {
   #SECRET_HASH="$(python3 secret_hash.py $USERNAME $APP_CLIENT_ID $APP_CLIENT_SECRET)";
-  SECRET_HASH="$(python3 secret_hash.py $(jq -r '.username' <<<$1) $(jq -r '.APP_CLIENT_ID' <<<$2) $(jq -r '.APP_CLIENT_SECRET' <<<$2))"
-  echo $SECRET_HASH
+  #SECRET_HASH="$(python3 secret_hash.py $(jq -r '.username' <<<$1) $(jq -r '.APP_CLIENT_ID' <<<$2) $(jq -r '.APP_CLIENT_SECRET' <<<$2))"
+  #echo $SECRET_HASH
 
   aws cognito-idp sign-up \
     --region $(jq -r '.REGION' <<<$2) \
     --client-id $(jq -r '.APP_CLIENT_ID' <<<$2) \
-    --secret-hash $SECRET_HASH \
     --username $(jq -r '.username' <<<$1) \
     --password $(jq -r '.password' <<<$1) \
     --user-attributes \
@@ -30,6 +29,8 @@ create_user() {
     Name="custom:ssn",Value="$(jq -r '.ssn' <<<$1)" \
     Name="custom:customerType",Value="$(jq -r '.customerType' <<<$1)"
 }
+
+    #--secret-hash $SECRET_HASH \
 
 # ==============
 # Confirm user by username
