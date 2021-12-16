@@ -30,7 +30,7 @@ create_user() {
     Name="custom:customerType",Value="$(jq -r '.customerType' <<<$1)"
 }
 
-    #--secret-hash $SECRET_HASH \
+#--secret-hash $SECRET_HASH \
 
 # ==============
 # Confirm user by username
@@ -76,12 +76,11 @@ log_environment_data() {
 # Load environment configuration
 ENV=""
 
-if [ $# -eq 0 ]
-  then
-    echo "You must to provide the environment as first parameter such as POC, DEV or TST values"
-    exit 1
-  else 
-    ENV="$1"  
+if [ $# -eq 0 ]; then
+  echo "You must to provide the environment as first parameter such as POC, DEV or TST values"
+  exit 1
+else
+  ENV="$1"
 fi
 
 # Get Environment Config
@@ -114,7 +113,6 @@ if [[ -n $2 ]]; then
     $ENVIRONMENT
   exit 0
 fi
-
 
 for USER in $USERS; do
   create_user \
