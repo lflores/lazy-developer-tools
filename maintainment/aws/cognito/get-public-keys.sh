@@ -36,4 +36,4 @@ echo $ENVIRONMENT
 USERPOOL_ID=$(jq -r '.USERPOOL_ID' <<<$ENVIRONMENT)
 echo "$(jq -r '.environment' <<<$ENVIRONMENT | sed 's/.*/\L&/')"
 curl --location --request GET "https://cognito-idp.${REGION}.amazonaws.com/${USERPOOL_ID}/.well-known/jwks.json" \
-  -o "jwt/jwt-$(jq -r '.environment' <<<$ENVIRONMENT | sed 's/.*/\L&/').json"
+  -o "jwt/jwk-$(jq -r '.environment' <<<$ENVIRONMENT | sed 's/.*/\L&/').json"

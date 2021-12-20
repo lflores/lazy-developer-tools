@@ -2,21 +2,18 @@
         "environment": "POC",
         "REGION": "us-east-1",
         "APP_CLIENT_ID": "7s8152mu36r4l79jqtr8p5d5ib",
-        "APP_CLIENT_SECRET": "7l6m2fg3ndbvrogcoglaidqtse43qudp4k22h9trhr7jqslvulr",
         "USERPOOL_ID": "us-east-1_jLcRkxjZg"
     },
     {
         "environment": "DEV",
         "REGION": "us-east-1",
-        "APP_CLIENT_ID": "4190habtd94sqrbikr8tnvb0kn",
-        "APP_CLIENT_SECRET": "ghq6o5oadv5d82rmgn4qqbov22mqntfi251mhpqrhlq84lj2i69",
-        "USERPOOL_ID": "us-east-1_B0Mz8mCQL"
+        "APP_CLIENT_ID": "19su1lgegpfcfcpqrm3i8nt300",
+        "USERPOOL_ID": "us-east-1_W0OhMxErO"
     },
     {
         "environment": "TST",
         "REGION": "us-east-1",
-        "APP_CLIENT_ID": "1nmd0cjc3dll7pp6ngklqaf0l0",
-        "APP_CLIENT_SECRET": "ctjn2fmu3fknr3ib48je37pdoetussvth3p84ekm6h26qb2a3ol",
-        "USERPOOL_ID": "us-east-1_Y2AIrBWfF"
+        "APP_CLIENT_ID": "396ncmmr8m1ull0rnvu5251pdi",
+        "USERPOOL_ID": "us-east-1_BVSBipa2W"
     }
 ]

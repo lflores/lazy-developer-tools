@@ -20,16 +20,17 @@ fi
 
 login_user() {
 
-  SECRET_HASH="$(python3 secret_hash.py $1 $3 $4)"
-
-  echo -e "\n${GREEN}Secret Hash \"$1\":${NC} ${LIGHT_GREEN}$SECRET_HASH${NC}"
+  #SECRET_HASH="$(python3 secret_hash.py $1 $3 $4)"
+  #echo -e "\n${GREEN}Secret Hash \"$1\":${NC} ${LIGHT_GREEN}$SECRET_HASH${NC}"
+  USER=$(jq -r '.username' <<<$1)
+  PASSWORD=$(jq -r '.password' <<<$1)
+  CLIENT_ID=$(jq -r '.APP_CLIENT_ID' <<<$2)
 
   aws cognito-idp initiate-auth \
     --auth-flow USER_PASSWORD_AUTH \
-    --auth-parameters USERNAME=$1,PASSWORD=$2 \
-    --client-id $3
+    --auth-parameters USERNAME=$USER,PASSWORD=$PASSWORD \
+    --client-id $CLIENT_ID
 }
-$(jq -r '.ResourceTagMappingList[]|select(.ResourceARN | startswith("arn:aws:ecs")).ResourceARN' <<<"$RESOURCES")
 
 ENVIRONMENT=$(cat environment-data.json | jq -c ".[] | select( .environment | contains(\"$ENV\"))")
 echo $ENVIRONMENT
@@ -38,10 +39,8 @@ if [[ -n $2 ]]; then
   USER=$(cat users-data.json | jq -c ".[] | select( .username | contains(\"$2\"))")
   echo $USER
   login_user \
-    $(jq -r '.username' <<<$USER) \
-    $(jq -r '.password' <<<$USER) \
-    $(jq -r '.APP_CLIENT_ID' <<<$ENVIRONMENT) \
-    $(jq -r '.APP_CLIENT_SECRET' <<<$ENVIRONMENT)
+    $USER \
+    $ENVIRONMENT
   exit 0
 fi
 
@@ -50,8 +49,6 @@ USERS=$(cat users-data.json | jq -c -r '.[]')
 
 for USER in $USERS; do
   login_user \
-    $(jq -r '.username' <<<$USER) \
-    $(jq -r '.password' <<<$USER) \
-    $(jq -r '.APP_CLIENT_ID' <<<$ENVIRONMENT) \
-    $(jq -r '.APP_CLIENT_SECRET' <<<$ENVIRONMENT)
+    $USER \
+    $ENVIRONMENT
 done

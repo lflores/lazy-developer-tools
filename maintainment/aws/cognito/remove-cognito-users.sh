@@ -23,7 +23,7 @@ log_environment_data() {
   echo -e "Region:${LIGHT_GREEN}$(jq -r '.REGION' <<<$1)${NC}"
   echo -e "UserPoolId:${LIGHT_GREEN}$(jq -r '.USERPOOL_ID' <<<$1)${NC}"
   echo -e "ClientId:${LIGHT_GREEN}$(jq -r '.APP_CLIENT_ID' <<<$1)${NC}"
-  echo -e "ClientSecret:${LIGHT_GREEN}$(jq -r '.APP_CLIENT_SECRET' <<<$1)${NC}\n\n"
+  # echo -e "ClientSecret:${LIGHT_GREEN}$(jq -r '.APP_CLIENT_SECRET' <<<$1)${NC}\n\n"
 }
 
 # Load environment configuration
