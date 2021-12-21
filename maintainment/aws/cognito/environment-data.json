@@ -15,5 +15,11 @@
         "REGION": "us-east-1",
         "APP_CLIENT_ID": "396ncmmr8m1ull0rnvu5251pdi",
         "USERPOOL_ID": "us-east-1_BVSBipa2W"
+    },
+    {
+        "environment": "EDEV",
+        "REGION": "us-east-1",
+        "APP_CLIENT_ID": "41d3kgorcugoq4g8kec1f8fmga",
+        "USERPOOL_ID": "us-east-1_9O3MAXCvz"
     }
 ]

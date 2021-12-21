@@ -9,11 +9,22 @@ LIGHT_BLUE='\033[1;34m'
 NC='\033[0m' # No Color
 
 update_module() {
-    cd ../$1
+    NAME=$(jq -r '.name' <<<$MODULE)
+    DESTINATION=$(jq -r '.destination' <<<$MODULE)
+    cd ../$NAME
     VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')
     echo -e "${GREEN}Releasing: ${NC}${LIGHT_GREEN}$1:$VERSION${NC}"
     # npm run build
     git checkout develop && git pull
+    rsync -av --progress ./ ../$DESTINATION/ \
+        --exclude .git \
+        --exclude .npmrc_codebuild \
+        --exclude config \
+        --exclude maintainment \
+        --exclude load-session-token.sh \
+        --exclude bin
+    #--exclude lib/**/*.d.ts \
+    #cp lib/**/*.ts "../$DESTINATION/lib"
 }
 
 search_parent() {
@@ -48,7 +59,7 @@ if [[ -n $1 ]]; then
         search_parent $ROOT_FOLDER
         cd $(jq -r '.name' <<<$MODULE)
         update_module \
-            $(jq -r '.name' <<<$MODULE)
+            $MODULE
     fi
     exit 0
 fi

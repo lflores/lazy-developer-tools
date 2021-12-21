@@ -1,21 +1,25 @@
 [{
         "name": "bcpr-cloud-cdk-application",
         "description": "",
-        "rootFolder": "infra"
+        "rootFolder": "infra",
+        "destination": "bcpr-dev-application"
     },
     {
         "name": "bcpr-cloud-cdk-infrastructure",
         "description": "",
-        "rootFolder": "infra"
+        "rootFolder": "infra",
+        "destination": "bcpr-dev-infrastructure"
     },
     {
         "name": "bcpr-cloud-cdk-lambdas",
         "description": "",
-        "rootFolder": "infra"
+        "rootFolder": "infra",
+        "destination": "bcpr-dev-lambdas"
     },
     {
         "name": "bcpr-cloud-cdk-api",
         "description": "",
-        "rootFolder": "backend"
+        "rootFolder": "backend",
+        "destination": "bcpr-dev-api"
     }
 ]
