@@ -22,7 +22,9 @@ update_module() {
         --exclude config \
         --exclude maintainment \
         --exclude load-session-token.sh \
-        --exclude bin
+        --exclude bin \
+        --exclude cdk.out
+
     #--exclude lib/**/*.d.ts \
     #cp lib/**/*.ts "../$DESTINATION/lib"
 }
