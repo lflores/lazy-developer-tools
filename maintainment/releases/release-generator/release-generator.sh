@@ -13,31 +13,36 @@ RELEASE_FOLDER=~/workspace/evertec/banco-cooperativo/backend/bcpr-documentation/
 RELEASE_FILE=~/workspace/evertec/banco-cooperativo/backend/bcpr-documentation/releases/Release-$PACKAGE_VERSION.md
 
 release_module() {
-    cd ../$1
-    if [ $2 == "maven" ]; then
+    FOLDER=$(jq -r '.name' <<<$1)
+    TYPE=$(jq -r '.versionType' <<<$1)
+
+    cd ../$FOLDER
+    if [ $TYPE == "maven" ]; then
         VERSION=$(get_maven_version)
-    elif [ $2 == "pubspec" ]; then
+    elif [ $TYPE == "pubspec" ]; then
         VERSION=$(get_flutter_version)
     else
         VERSION=$(get_package_version)
     fi
-    if [ $3 == true ]; then
-        LINE=$(echo -e "│  └── $1: $VERSION")
-        LINE_SCREEN=$(echo -e "│  └── ${LIGHT_BLUE}$1${NC}: ${LIGHT_GREEN}$VERSION${NC}")
+    if [ $2 == true ]; then
+        LINE=$(echo -e "│  └── $FOLDER: $VERSION")
+        LINE_SCREEN=$(echo -e "│  └── ${LIGHT_BLUE}$FOLDER${NC}: ${LIGHT_GREEN}$VERSION${NC}")
     else
-        LINE=$(echo -e "│  ├── $1: $VERSION")
-        LINE_SCREEN=$(echo -e "│  ├── ${LIGHT_BLUE}$1${NC}: ${LIGHT_GREEN}$VERSION${NC}")
+        LINE=$(echo -e "│  ├── $FOLDER: $VERSION")
+        LINE_SCREEN=$(echo -e "│  ├── ${LIGHT_BLUE}$FOLDER${NC}: ${LIGHT_GREEN}$VERSION${NC}")
     fi
     echo $LINE_SCREEN
     echo $LINE >>$RELEASE_FILE
-    make_release_document $1 $VERSION
+    make_release_document $FOLDER $VERSION
 }
 
 make_release_document() {
     if [[ ! -d $RELEASE_FOLDER ]]; then
         mkdir $RELEASE_FOLDER
     fi
-    cp ./CHANGELOG.md $RELEASE_FOLDER/$1-$2.md
+    if [[ -f CHANGELOG.md ]]; then
+        cp ./CHANGELOG.md $RELEASE_FOLDER/$1-$2.md
+    fi
 }
 
 search_parent() {
@@ -69,7 +74,7 @@ get_package_version() {
 }
 
 get_flutter_version() {
-    VERSION=$(grep -oEi 'version:\s([0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}.+)' pubspec.yaml)
+    VERSION=$(grep -oEi 'version:\s([0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}.*)' pubspec.yaml)
     #echo $?
     echo ${VERSION//version:/}
 }
@@ -81,15 +86,13 @@ if [[ -n $1 ]]; then
     ROOT_FOLDER=$(jq -r '.parentFolder' <<<$MODULE)
     if [ -z "$ROOT_FOLDER" ]; then
         release_module \
-            $(jq -r '.name' <<<$MODULE) \
-            $(jq -r '.versionType' <<<$MODULE) \
-            false
+            $MODULE
+        false
     else
         search_parent $ROOT_FOLDER
         cd $(jq -r '.name' <<<$MODULE)
         release_module \
-            $(jq -r '.name' <<<$MODULE) \ 
-        $(jq -r '.versionType' <<<$MODULE) \
+            $MODULE \
             false
     fi
     exit 0
@@ -102,7 +105,6 @@ print_modules() {
     cd ~/workspace/evertec/banco-cooperativo/infra/
 
     LAST=$(jq -rs '.[][-1].name' <<<$MODULES)
-
     for MODULE_NAME in $(echo $MODULES | jq -r '.[] | .name'); do
         IS_LAST=false
         if [ $MODULE_NAME == $LAST ]; then
@@ -112,15 +114,13 @@ print_modules() {
         ROOT_FOLDER=$(jq -r '.parentFolder' <<<$MODULE)
         if [ -z "$ROOT_FOLDER" ]; then
             release_module \
-                $(jq -r '.name' <<<$MODULE) \
-                $(jq -r '.versionType' <<<$MODULE) \
+                $(jq -c '.' <<<$MODULE) \
                 $IS_LAST
         else
             search_parent $ROOT_FOLDER
             cd $(jq -r '.name' <<<$MODULE)
             release_module \
-                $(jq -r '.name' <<<$MODULE) \
-                $(jq -r '.versionType' <<<$MODULE) \
+                $(jq -c '.' <<<$MODULE) \
                 $IS_LAST
         fi
     done
@@ -129,7 +129,7 @@ print_modules() {
 }
 
 print_tree() {
-    echo "\`\`\`javascript" >> $RELEASE_FILE
+    echo "\`\`\`javascript" >>$RELEASE_FILE
     echo -e "\n${LIGHT_GREEN}BCPR Mobile${NC}"
     echo "├─ All" >>$RELEASE_FILE
     print_modules "all"
@@ -147,17 +147,16 @@ print_tree() {
     echo "\`\`\`" >>$RELEASE_FILE
 }
 
-echo "# Release $PACKAGE_VERSION" > $RELEASE_FILE
+echo "# Release $PACKAGE_VERSION" >$RELEASE_FILE
 
-echo -e "\n# Versions tree" >> $RELEASE_FILE
+echo -e "\n# Versions tree" >>$RELEASE_FILE
 print_tree
-echo -e "\n# Changelogs" >> $RELEASE_FILE
-for file in $RELEASE_FOLDER/*
-do
-echo $file
+echo -e "\n# Changelogs" >>$RELEASE_FILE
+for file in $RELEASE_FOLDER/*; do
+    echo $file
     if [[ -f $file ]]; then
         #copy stuff ....
-        echo -e "## $(basename $file)" >> $RELEASE_FILE
-        echo -e "[$(basename $file)](./$PACKAGE_VERSION/$(basename $file))" >> $RELEASE_FILE
+        echo -e "## $(basename $file)" >>$RELEASE_FILE
+        echo -e "[$(basename $file)](./$PACKAGE_VERSION/$(basename $file))" >>$RELEASE_FILE
     fi
 done
