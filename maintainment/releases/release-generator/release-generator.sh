@@ -8,7 +8,7 @@ YELLOW='\033[1;33m'
 LIGHT_BLUE='\033[1;34m'
 NC='\033[0m' # No Color
 
-PACKAGE_VERSION=0.4.0
+PACKAGE_VERSION=0.5.0
 RELEASE_FOLDER=~/workspace/evertec/banco-cooperativo/backend/bcpr-documentation/releases/$PACKAGE_VERSION
 RELEASE_FILE=~/workspace/evertec/banco-cooperativo/backend/bcpr-documentation/releases/Release-$PACKAGE_VERSION.md
 
