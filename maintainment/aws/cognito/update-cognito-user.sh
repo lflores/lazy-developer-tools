@@ -25,11 +25,14 @@ update_user() {
   #echo -e "\n${GREEN}Secret Hash \"$1\":${NC} ${LIGHT_GREEN}$SECRET_HASH${NC}"
   lastName=$(jq -r '.lastname' <<<$1)
   name=$(jq -r '.name' <<<$1)
+  customerId=$(jq -r '.ssn' <<<$1)
+  customerType=$(jq -r '.customerType' <<<$1)
+  echo "$customerType"
 
   aws cognito-idp admin-update-user-attributes \
     --user-pool-id $(jq -r '.USERPOOL_ID' <<<$2) \
     --username $(jq -r '.username' <<<$1) \
-    --user-attributes Name="family_name",Value="$lastName" Name="given_name",Value="$name"
+    --user-attributes Name="family_name",Value="$lastName" Name="given_name",Value="$name" Name="custom:customerType",Value="$customerType" 
 }
 
 $(jq -r '.ResourceTagMappingList[]|select(.ResourceARN | startswith("arn:aws:ecs")).ResourceARN' <<<"$RESOURCES")

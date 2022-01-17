@@ -7,7 +7,7 @@
         "lastname": "Sosa",
         "group": "admins-group",
         "ssn": "345645611",
-        "customerType": "0"
+        "customerType": "SSN"
     },
     {
         "username": "yulietwzt6eedu6",
@@ -18,7 +18,7 @@
         "lastname": "Sosa",
         "group": "users-group",
         "ssn": "345645611",
-        "customerType": "0"
+        "customerType": "SSN"
     },
     {
         "username": "camiloavila",
@@ -29,7 +29,7 @@
         "lastname": "Avila",
         "group": "users-group",
         "ssn": "345634657",
-        "customerType": "0"
+        "customerType": "SSN"
     },
     {
         "username": "leonardoflores",
@@ -40,7 +40,7 @@
         "lastname": "Flores",
         "group": "admins-group",
         "ssn": "345678901",
-        "customerType": "0"
+        "customerType": "SSN"
     },
     {
         "username": "enriquecordero",
@@ -51,7 +51,7 @@
         "lastname": "Cordero",
         "group": "users-group",
         "ssn": "345645123",
-        "customerType": "0"
+        "customerType": "SSN"
     },
     {
         "username": "facundovillalba",
@@ -62,7 +62,7 @@
         "lastname": "Villalba",
         "group": "users-group",
         "ssn": "34561127",
-        "customerType": "0"
+        "customerType": "SSN"
     },
     {
         "username": "simonfermo",
@@ -73,7 +73,7 @@
         "lastname": "Fermo",
         "group": "users-group",
         "ssn": "545787961",
-        "customerType": "0"
+        "customerType": "SSN"
     },
     {
         "username": "luisB",
@@ -84,7 +84,7 @@
         "lastname": "Birchenz",
         "group": "users-group",
         "ssn": "345645611",
-        "customerType": "0"
+        "customerType": "SSN"
     },
     {
         "username": "pedrocardona",
@@ -95,7 +95,7 @@
         "lastname": "Cardona",
         "group": "users-group",
         "ssn": "3451237",
-        "customerType": "0"
+        "customerType": "SSN"
     },
     {
         "username": "rosanacespedes",
@@ -106,6 +106,6 @@
         "lastname": "Cespedes",
         "group": "users-group",
         "ssn": "34564567",
-        "customerType": "0"
+        "customerType": "SSN"
     }
 ]
