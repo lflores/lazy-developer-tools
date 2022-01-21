@@ -39,8 +39,8 @@
         "name": "Leonardo",
         "lastname": "Flores",
         "group": "admins-group",
-        "ssn": "345678901",
-        "customerType": "SSN"
+        "ssn": "3451237",
+        "customerType": "TAX_ID"
     },
     {
         "username": "enriquecordero",
