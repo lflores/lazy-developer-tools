@@ -13,8 +13,8 @@
     {
         "environment": "TST",
         "REGION": "us-east-1",
-        "APP_CLIENT_ID": "396ncmmr8m1ull0rnvu5251pdi",
-        "USERPOOL_ID": "us-east-1_BVSBipa2W"
+        "APP_CLIENT_ID": "58p6l3sbrj1d730eonpdqeblnd",
+        "USERPOOL_ID": "us-east-1_EEKSaWw33"
     },
     {
         "environment": "EDEV",
