@@ -1,8 +1,8 @@
 [{
         "environment": "POC",
         "REGION": "us-east-1",
-        "APP_CLIENT_ID": "7s8152mu36r4l79jqtr8p5d5ib",
-        "USERPOOL_ID": "us-east-1_jLcRkxjZg"
+        "APP_CLIENT_ID": "6g3a5ovoh1o50nlh5qol7h5ehg",
+        "USERPOOL_ID": "us-east-1_pbpFDpARd"
     },
     {
         "environment": "DEV",
