@@ -7,8 +7,8 @@
     {
         "environment": "DEV",
         "REGION": "us-east-1",
-        "APP_CLIENT_ID": "19su1lgegpfcfcpqrm3i8nt300",
-        "USERPOOL_ID": "us-east-1_W0OhMxErO"
+        "APP_CLIENT_ID": "33thjmpic48none2shf37cllgh",
+        "USERPOOL_ID": "us-east-1_PBJT7Wuky"
     },
     {
         "environment": "TST",
