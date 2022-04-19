@@ -1,8 +1,8 @@
 [{
         "environment": "POC",
         "REGION": "us-east-1",
-        "APP_CLIENT_ID": "6g3a5ovoh1o50nlh5qol7h5ehg",
-        "USERPOOL_ID": "us-east-1_pbpFDpARd"
+        "APP_CLIENT_ID": "52lqat0jn49ho7tvaemj6gc64q",
+        "USERPOOL_ID": "us-east-1_bSC4mxmBf"
     },
     {
         "environment": "DEV",
@@ -13,13 +13,13 @@
     {
         "environment": "TST",
         "REGION": "us-east-1",
-        "APP_CLIENT_ID": "58p6l3sbrj1d730eonpdqeblnd",
-        "USERPOOL_ID": "us-east-1_EEKSaWw33"
+        "APP_CLIENT_ID": "384pqulv2jrv7g6dcthv6bv6ea",
+        "USERPOOL_ID": "us-east-1_T1FDUAmcK"
     },
     {
         "environment": "EDEV",
         "REGION": "us-east-1",
-        "APP_CLIENT_ID": "1s4afalolhn65ug0cl9ds8r5l",
-        "USERPOOL_ID": "us-east-1_tyAfxSK81"
+        "APP_CLIENT_ID": "59a4dbof7fmsj7udh2daba4hoq",
+        "USERPOOL_ID": "us-east-1_rprTDZl1H"
     }
 ]

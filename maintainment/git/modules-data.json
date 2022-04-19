@@ -21,5 +21,11 @@
         "description": "",
         "rootFolder": "backend",
         "destination": "bcpr-dev-api"
+    },
+    {
+        "name": "bcpr-cloud-cdk-core",
+        "description": "",
+        "rootFolder": "infra",
+        "destination": "bcpr-dev-core"
     }
 ]

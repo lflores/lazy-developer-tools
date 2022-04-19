@@ -1,12 +1,12 @@
 [{
-        "name": "bcpr-cloud-cdk-application",
+        "name": "bcpr-dev-application",
         "description": "",
         "parentFolder": "infra",
         "layer": "cloud",
         "versionType": "package"
     },
     {
-        "name": "bcpr-cloud-cdk-infrastructure",
+        "name": "bcpr-dev-infrastructure",
         "description": "",
         "parentFolder": "infra",
         "layer": "cloud",
@@ -20,28 +20,28 @@
         "versionType": "package"
     },
     {
-        "name": "bcpr-cloud-cdk-lambdas",
+        "name": "bcpr-dev-lambdas",
         "description": "",
         "parentFolder": "infra",
         "layer": "cloud",
         "versionType": "package"
     },
     {
-        "name": "bcpr-cloud-cdk-api",
+        "name": "bcpr-dev-api",
         "description": "",
         "parentFolder": "backend",
         "layer": "backend",
         "versionType": "package"
     },
     {
-        "name": "bcpr-cloud-cdk-core",
+        "name": "bcpr-dev-core",
         "description": "",
         "parentFolder": "infra",
         "layer": "cloud",
         "versionType": "package"
     },
     {
-        "name": "bcpr-cloud-cdk-network",
+        "name": "bcpr-dev-network",
         "description": "",
         "parentFolder": "infra",
         "layer": "cloud",
