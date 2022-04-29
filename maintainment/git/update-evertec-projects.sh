@@ -14,8 +14,18 @@ update_module() {
     cd ../$NAME
     VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')
     echo -e "${GREEN}Releasing: ${NC}${LIGHT_GREEN}$1:$VERSION${NC}"
+    # diff -q \
+    #     -x cdk.context.json \
+    #     -x CHANGELOG.md \
+    #     -x dist \
+    #     -x .gitlab \
+    #     -x package.json \
+    #     -x .npmrc_codebuild \
+    #     -x README.md \
+    # ./ ../$DESTINATION/
+
     # npm run build
-    git checkout develop && git pull
+    # git checkout develop && git pull
     rsync -av --progress ./ ../$DESTINATION/ \
         --exclude .git \
         --exclude .npmrc_codebuild \
@@ -23,7 +33,15 @@ update_module() {
         --exclude maintainment \
         --exclude load-session-token.sh \
         --exclude bin \
-        --exclude cdk.out
+        --exclude cdk.out \
+        --exclude README.md \
+        --exclude cdk.context.json \
+        --exclude package.json \
+        --exclude CHANGELOG.md \
+        --exclude lambda/.env.local \
+        --exclude lambda/.env.dev \
+        --exclude lambda/.env.tst \
+        --exclude lambda/.env.poc
 
     #--exclude lib/**/*.d.ts \
     #cp lib/**/*.ts "../$DESTINATION/lib"

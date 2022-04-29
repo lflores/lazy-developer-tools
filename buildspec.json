@@ -1,0 +1,34 @@
+{
+    "version": "0.2",
+    "phases": {
+        "install": {
+            "commands": [
+                "mv .npmrc_codebuild .npmrc",
+                "curl 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o 'awscliv2.zip'",
+                "unzip awscliv2.zip",
+                "./aws/install",
+                "/usr/local/bin/aws codeartifact login --tool npm --repository cdk-core --domain bcpr --domain-owner 864961356886 --region us-east-1",
+                "npm install"
+            ]
+        },
+        "build": {
+            "commands": [
+                "npm run build",
+                "npm run cdk synth BCPR-DEV-Api* -- -o dist",
+                "cp ci/* dist",
+                "ls dist",
+                "cd dist/asset.d6d9d8acb6997a7b061fe26f2011adc203fd9266d852bf71a41fa3de0baf5784 && zip -r ../asset.d6d9d8acb6997a7b061fe26f2011adc203fd9266d852bf71a41fa3de0baf5784.zip . && zipinfo ../asset.d6d9d8acb6997a7b061fe26f2011adc203fd9266d852bf71a41fa3de0baf5784.zip && cd ..",
+                "aws s3 cp \"asset.d6d9d8acb6997a7b061fe26f2011adc203fd9266d852bf71a41fa3de0baf5784.zip\" \"s3://$S3_BUCKET_NAME/$S3_BUCKET_PREFIX/assets/asset.d6d9d8acb6997a7b061fe26f2011adc203fd9266d852bf71a41fa3de0baf5784.zip\" && cd ..",
+                "sed -i -e \"s/S3_BUCKET_NAME/$S3_BUCKET_NAME/\" $(find dist -type f -not -path \"dist/**/node_modules/*\")",
+                "sed -i -e \"s/S3_BUCKET_PREFIX/$S3_BUCKET_PREFIX/\" $(find dist -type f -not -path \"dist/**/node_modules/*\")"
+            ]
+        }
+    },
+    "artifacts": {
+        "base-directory": "dist",
+        "files": [
+            "*.template.json",
+            "*stack-config.json"
+        ]
+    }
+}
