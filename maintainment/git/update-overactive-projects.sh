@@ -8,16 +8,43 @@ YELLOW='\033[1;33m'
 LIGHT_BLUE='\033[1;34m'
 NC='\033[0m' # No Color
 
-release_module() {
-    cd ../$1
+update_module() {
+    NAME=$(jq -r '.destination' <<<$MODULE)
+    DESTINATION=$(jq -r '.name' <<<$MODULE)
+    cd ../$NAME
     VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')
     echo -e "${GREEN}Releasing: ${NC}${LIGHT_GREEN}$1:$VERSION${NC}"
+    # diff -q \
+    #     -x cdk.context.json \
+    #     -x CHANGELOG.md \
+    #     -x dist \
+    #     -x .gitlab \
+    #     -x package.json \
+    #     -x .npmrc_codebuild \
+    #     -x README.md \
+    # ./ ../$DESTINATION/
+
     # npm run build
-    git checkout develop && git pull
-    git checkout release && git pull
-    git merge develop && git commit -m "Merge with develop"
-    git push
-    git checkout develop
+    # git checkout develop && git pull
+    rsync -av --progress ./ ../$DESTINATION/ \
+        --exclude .git \
+        --exclude .npmrc_codebuild \
+        --exclude config \
+        --exclude maintainment \
+        --exclude load-session-token.sh \
+        --exclude bin \
+        --exclude cdk.out \
+        --exclude README.md \
+        --exclude cdk.context.json \
+        --exclude package.json \
+        --exclude CHANGELOG.md \
+        --exclude lambda/.env.local \
+        --exclude lambda/.env.dev \
+        --exclude lambda/.env.tst \
+        --exclude lambda/.env.poc
+
+    #--exclude lib/**/*.d.ts \
+    #cp lib/**/*.ts "../$DESTINATION/lib"
 }
 
 search_parent() {
@@ -41,19 +68,18 @@ search_parent() {
 }
 
 if [[ -n $1 ]]; then
-    # MODULE=$(cat modules-data.json | jq -c ".[] | select( .name | contains(\"$1\"))")
     MODULE=$(cat modules-data.json | jq -c ".[] | select( .name | contains(\"$1\"))")
     echo $MODULE
     cd ~/workspace/evertec/banco-cooperativo/infra
     ROOT_FOLDER=$(jq -r '.rootFolder' <<<$MODULE)
     if [ -z "$ROOT_FOLDER" ]; then
-        release_module \
+        update_module \
             $(jq -r '.name' <<<$MODULE)
     else
         search_parent $ROOT_FOLDER
         cd $(jq -r '.name' <<<$MODULE)
-        release_module \
-            $(jq -r '.name' <<<$MODULE)
+        update_module \
+            $MODULE
     fi
     exit 0
 fi
@@ -64,12 +90,12 @@ cd ~/workspace/evertec/banco-cooperativo/infra
 for MODULE in $MODULES; do
     ROOT_FOLDER=$(jq -r '.rootFolder' <<<$MODULE)
     if [ -z "$ROOT_FOLDER" ]; then
-        release_module \
+        update_module \
             $(jq -r '.name' <<<$MODULE)
     else
         search_parent $ROOT_FOLDER
         cd $(jq -r '.name' <<<$MODULE)
-        release_module \
+        update_module \
             $(jq -r '.name' <<<$MODULE)
     fi
 done

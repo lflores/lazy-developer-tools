@@ -27,5 +27,11 @@
         "description": "",
         "rootFolder": "infra",
         "destination": "bcpr-dev-core"
+    },
+    {
+        "name": "bcpr-cloud-cdk-network",
+        "description": "",
+        "rootFolder": "infra",
+        "destination": "bcpr-dev-network"
     }
 ]
