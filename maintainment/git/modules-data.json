@@ -29,6 +29,12 @@
         "destination": "bcpr-dev-core"
     },
     {
+        "name": "bcpr-middleware-server",
+        "description": "",
+        "rootFolder": "backend",
+        "destination": "bcpr-dev-middleware-server"
+    },
+    {
         "name": "bcpr-cloud-cdk-network",
         "description": "",
         "rootFolder": "infra",
