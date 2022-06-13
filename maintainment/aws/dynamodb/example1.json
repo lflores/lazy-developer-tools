@@ -1,0 +1,486 @@
+{
+    "Items": [{
+            "isCardLockedByFraud": {
+                "BOOL": false
+            },
+            "emailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    }
+                }
+            },
+            "description": {
+                "M": {
+                    "en": {
+                        "S": "Asset or services were acquired that were not dispatched or rendered on the date agreed by the business or establishment."
+                    },
+                    "es": {
+                        "S": "Se adquirieron bienes o servicios que no fueron despachados o rendidos en la fecha acordada por el comercio o establecimiento."
+                    }
+                }
+            },
+            "id": {
+                "N": "7"
+            },
+            "officialEmailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    }
+                }
+            },
+            "title": {
+                "M": {
+                    "en": {
+                        "S": "Assets or services not provided."
+                    },
+                    "es": {
+                        "S": "Bienes o servicios no proporcionados"
+                    }
+                }
+            }
+        },
+        {
+            "isCardLockedByFraud": {
+                "BOOL": false
+            },
+            "emailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    }
+                }
+            },
+            "description": {
+                "M": {
+                    "en": {
+                        "S": "The merchant or establishment did not process the cancellation of the transaction."
+                    },
+                    "es": {
+                        "S": "El comercio o establecimiento no procesó la cancelación de la transacción."
+                    }
+                }
+            },
+            "id": {
+                "N": "8"
+            },
+            "officialEmailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    }
+                }
+            },
+            "title": {
+                "M": {
+                    "en": {
+                        "S": "Transaction canceled"
+                    },
+                    "es": {
+                        "S": "Transacción cancelada"
+                    }
+                }
+            }
+        },
+        {
+            "isCardLockedByFraud": {
+                "BOOL": false
+            },
+            "emailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    }
+                }
+            },
+            "description": {
+                "M": {
+                    "en": {
+                        "S": "If none of the reasons provided fit your need, please tell us what happens by completing the fields below:"
+                    },
+                    "es": {
+                        "S": "Si ninguna de las razones proporcionadas se ajusta a tu necesidad, por favor, indícanos qué sucede completando los campos a continuación:"
+                    }
+                }
+            },
+            "id": {
+                "N": "10"
+            },
+            "officialEmailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    }
+                }
+            },
+            "title": {
+                "M": {
+                    "en": {
+                        "S": "Other"
+                    },
+                    "es": {
+                        "S": "Otro"
+                    }
+                }
+            }
+        },
+        {
+            "isCardLockedByFraud": {
+                "BOOL": false
+            },
+            "emailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    }
+                }
+            },
+            "description": {
+                "M": {
+                    "en": {
+                        "S": "The transaction was authorized, but the amount does not correspond to the amount authorized by the client."
+                    },
+                    "es": {
+                        "S": "La transacción fue autorizada, pero la cantidad no corresponde con la autorizada por el cliente."
+                    }
+                }
+            },
+            "id": {
+                "N": "3"
+            },
+            "officialEmailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    }
+                }
+            },
+            "title": {
+                "M": {
+                    "en": {
+                        "S": "Wrong amount"
+                    },
+                    "es": {
+                        "S": "Monto incorrecto"
+                    }
+                }
+            }
+        },
+        {
+            "isCardLockedByFraud": {
+                "BOOL": false
+            },
+            "emailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    }
+                }
+            },
+            "description": {
+                "M": {
+                    "en": {
+                        "S": "The transaction was authorized, but was entered more than once:"
+                    },
+                    "es": {
+                        "S": "La transacción fue autorizada, pero fue cargada mas de una vez:"
+                    }
+                }
+            },
+            "id": {
+                "N": "2"
+            },
+            "officialEmailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    }
+                }
+            },
+            "title": {
+                "M": {
+                    "en": {
+                        "S": "Duplicate transaction"
+                    },
+                    "es": {
+                        "S": "Transacción duplicada"
+                    }
+                }
+            }
+        },
+        {
+            "isCardLockedByFraud": {
+                "BOOL": false
+            },
+            "emailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    }
+                }
+            },
+            "description": {
+                "M": {
+                    "en": {
+                        "S": "Assets or services were purchased but they are not in perfect condition: they have defects or do not work."
+                    },
+                    "es": {
+                        "S": "Se adquirieron bienes o servicios pero no se encuentran en perfecto estado: presentan defectos o no funcionan."
+                    }
+                }
+            },
+            "id": {
+                "N": "9"
+            },
+            "officialEmailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    }
+                }
+            },
+            "title": {
+                "M": {
+                    "en": {
+                        "S": "Defective assets or services"
+                    },
+                    "es": {
+                        "S": "Bienes o servicios defectuosos"
+                    }
+                }
+            }
+        },
+        {
+            "isCardLockedByFraud": {
+                "BOOL": false
+            },
+            "emailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    }
+                }
+            },
+            "description": {
+                "M": {
+                    "en": {
+                        "S": "An ATM withdrawal was requested, but the cash was not issued"
+                    },
+                    "es": {
+                        "S": "Se solicitó un retiro por ATM, pero el efectivo no fue expedido"
+                    }
+                }
+            },
+            "id": {
+                "N": "4"
+            },
+            "officialEmailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    }
+                }
+            },
+            "title": {
+                "M": {
+                    "en": {
+                        "S": "ATM did not issue the money"
+                    },
+                    "es": {
+                        "S": "ATM no expidió el dinero"
+                    }
+                }
+            }
+        },
+        {
+            "isCardLockedByFraud": {
+                "BOOL": false
+            },
+            "emailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    }
+                }
+            },
+            "description": {
+                "M": {
+                    "en": {
+                        "S": "The business or establishment agreed to process a credit in favor of the customer's account according to this transaction but it was not done."
+                    },
+                    "es": {
+                        "S": "El comercio o establecimiento acordó procesar un crédito a favor de la cuenta del cliente de acuerdo a esta transacción pero no lo realizó."
+                    }
+                }
+            },
+            "id": {
+                "N": "6"
+            },
+            "officialEmailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    }
+                }
+            },
+            "title": {
+                "M": {
+                    "en": {
+                        "S": "Credit not processed"
+                    },
+                    "es": {
+                        "S": "Crédito no procesado"
+                    }
+                }
+            }
+        },
+        {
+            "isCardLockedByFraud": {
+                "BOOL": false
+            },
+            "emailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    }
+                }
+            },
+            "description": {
+                "M": {
+                    "en": {
+                        "S": "The transaction was NOT authorized by the cardholder, card user or explicitly authorized person."
+                    },
+                    "es": {
+                        "S": "La transacción NO fue autorizada, ni por el titular de la tarjeta, usuario de la misma o persona explícitamente autorizada"
+                    }
+                }
+            },
+            "id": {
+                "N": "1"
+            },
+            "officialEmailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    }
+                }
+            },
+            "title": {
+                "M": {
+                    "en": {
+                        "S": "Unauthorized charge"
+                    },
+                    "es": {
+                        "S": "Cargo no autorizado"
+                    }
+                }
+            }
+        },
+        {
+            "isCardLockedByFraud": {
+                "BOOL": false
+            },
+            "emailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+                    }
+                }
+            },
+            "description": {
+                "M": {
+                    "en": {
+                        "S": "An ATM withdrawal was requested, but the cash was not issued in full"
+                    },
+                    "es": {
+                        "S": "Se solicitó un retiro por ATM, pero se produjo el siguiente inconveniente:"
+                    }
+                }
+            },
+            "id": {
+                "N": "5"
+            },
+            "officialEmailTemplate": {
+                "M": {
+                    "en": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    },
+                    "es": {
+                        "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+                    }
+                }
+            },
+            "title": {
+                "M": {
+                    "en": {
+                        "S": "ATM did not issue the total money"
+                    },
+                    "es": {
+                        "S": "ATM no expidió el total del dinero"
+                    }
+                }
+            }
+        }
+    ],
+    "Count": 10,
+    "ScannedCount": 10,
+    "ConsumedCapacity": null
+}

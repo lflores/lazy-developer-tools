@@ -1,0 +1,223 @@
+13,22d12
+<     "emailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         }
+<       }
+<     },
+29,38d18
+<     "officialEmailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         }
+<       }
+<     },
+61,70d40
+<     "emailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         }
+<       }
+<     },
+77,86d46
+<     "officialEmailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         }
+<       }
+<     },
+109,118d68
+<     "emailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         }
+<       }
+<     },
+125,134d74
+<     "officialEmailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         }
+<       }
+<     },
+157,166d96
+<     "emailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         }
+<       }
+<     },
+173,182d102
+<     "officialEmailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         }
+<       }
+<     },
+205,214d124
+<     "emailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         }
+<       }
+<     },
+221,230d130
+<     "officialEmailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         }
+<       }
+<     },
+253,262d152
+<     "emailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         }
+<       }
+<     },
+269,278d158
+<     "officialEmailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         }
+<       }
+<     },
+301,310d180
+<     "emailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         }
+<       }
+<     },
+317,326d186
+<     "officialEmailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         }
+<       }
+<     },
+349,358d208
+<     "emailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         }
+<       }
+<     },
+365,374d214
+<     "officialEmailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         }
+<       }
+<     },
+397,406d236
+<     "emailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         }
+<       }
+<     },
+411,421c241
+<       "BOOL": false
+<     },
+<     "officialEmailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         }
+<       }
+---
+>       "BOOL": true
+445,454d264
+<     "emailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_user_claims_respuesta_usuario.html"
+<         }
+<       }
+<     },
+460,469d269
+<     },
+<     "officialEmailTemplate": {
+<       "M": {
+<         "en": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         },
+<         "es": {
+<           "S": "https://bcpr-dev-claims.s3.amazonaws.com/html_email_templates/Email_oficial_Claims_0k.html"
+<         }
+<       }
