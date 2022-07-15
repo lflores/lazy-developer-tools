@@ -39,14 +39,14 @@
         "name": "Leonardo",
         "lastname": "Flores",
         "group": "admins-group",
-        "ssn": "3451237",
-        "customerType": "TAX_ID"
+        "ssn": "031688579",
+        "customerType": "SSN"
     },
     {
         "username": "enriquecordero",
         "password": "Test12345",
         "email": "Enrique.Cordero@evertecinc.com",
-        "phone": "+541164541138",
+        "phone": "+17879345758",
         "name": "Enrique",
         "lastname": "Cordero",
         "group": "users-group",

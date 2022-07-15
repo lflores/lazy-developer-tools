@@ -27,6 +27,12 @@
         "REGION": "us-east-1",
         "APP_CLIENT_ID": "46tt7vjolinshdbhlpa9l00879",
         "USERPOOL_ID": "us-east-1_tw1zLvZ5f"
+    },
+    {
+        "environment": "EPOC",
+        "REGION": "us-east-1",
+        "APP_CLIENT_ID": "32u0ibmdhna2r651c8edb1esje",
+        "USERPOOL_ID": "us-east-1_FVDsQ5bEV"
     }
 
 ]

@@ -1,0 +1,621 @@
+[{
+        "id": {
+            "S": "1"
+        },
+        "categoryId": {
+            "S": "1"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "What does it mean to activate my credit card? "
+                },
+                "es": {
+                    "S": "¿Qué significa activar mi tarjeta de crédito? "
+                }
+            }
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "When you receive your card, it is deactivated. This is to prevent someone other than you from accessing and using the card. You need to activate it to start making transactions."
+                },
+                "es": {
+                    "S": "Cuando usted recibe su tarjeta, la misma esta desactivada. Esto es para evitar que otra persona que no sea usted puede tener acceso a la tarjeta y utilizarla. Es necesario que usted active la misma para comenzar a realizar transacciones."
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        }
+    },
+    {
+        "id": {
+            "S": "2"
+        },
+        "categoryId": {
+            "S": "1"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "What information do I need to know to activate my card?"
+                },
+                "es": {
+                    "S": "¿Qué información necesito saber para activar mi tarjeta?"
+                }
+            }
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "To activate your card using My Coop® Card, you need:\n\n\n\t1. The 16 digits of the card\n\t2. The expiration dates\n\t3. Last 4 social security numbers."
+                },
+                "es": {
+                    "S": "Para activar su tarjeta utilizando Mi Tarjeta Coop®, usted necesita:\n\n\n\t1.    Los 16 dígitos de la tarjeta\n\t2.    La fechas de expiración                    \n\t3.    Los 4 últimos números de seguro social."
+                }
+            }
+        },
+        "weight": {
+            "N": "2"
+        }
+    },
+    {
+        "id": {
+            "S": "3"
+        },
+        "categoryId": {
+            "S": "1"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "What other mechanism can I use to activate my card?"
+                },
+                "es": {
+                    "S": "¿Qué otro mecanismo puedo utilizar para activar mi tarjeta?"
+                }
+            }
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "In addition to activating the card using the My Coop® Card APP, you can activate your card by calling our automated system at 787-281-8444. This service is available 24/7.\n\n\n\tYou can also contact a representative of your Cooperative."
+                },
+                "es": {
+                    "S": "Además de activar la tarjeta utilizando la APP Mi Tarjeta Coop®, usted puede activar su tarjeta llamando a nuestro sistema automatizado al 787-281-8444. Este servicio está disponible 24/7.\n\n\n\tTambién puede contactar a un representante de su Cooperativa."
+                }
+            }
+        },
+        "weight": {
+            "N": "3"
+        }
+    },
+    {
+        "id": {
+            "S": "4"
+        },
+        "categoryId": {
+            "S": "1"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "I forgot the user ID or password"
+                },
+                "es": {
+                    "S": "Olvidé el ID de usuario o la contraseña"
+                }
+            }
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "No problem, just follow the link \"\n\n\tNeed help with your username and / or password \" and that's it. You will need to have the social security number, identify if the account is personal or business, the date of birth, mobile phone number and email. In addition, you need to identify the cooperative that issues the card, card number, expiration date and the three digits that are on the back of the card (CVV)\n\tOnce you enter the data,\n\tMy Coop® card will send a code to your mobile phone that must be entered into the app.Once the process is completed,\n\tMy Coop® Card will provide you with the user registered in the app or allow you to change your password."
+                },
+                "es": {
+                    "S": "No hay problema, solo tiene que seguir el enlace de \"Necesitas ayuda con tu usuario y/o clave\" y listo. Necesitará tener el número de seguro social, identificar si la cuenta es personal o comercial, la fecha de nacimiento, número de teléfono móvil y correo electrónico. Además, necesita identificar cuál es la cooperativa que emite la tarjeta, número de la tarjeta, fecha de expiración y los tres dígitos que están en la parte posterior de la tarjeta (CVV)\n\tUna vez ingrese los datos,\n\tMi tarjeta Coop®,\n\tle enviará un código a su teléfono móvil que deberá ser ingresado a la app.Una vez completado el proceso Mi Tarjeta Coop® le proveerá el usuario registrado en la app o permitirá el cambio de contraseña."
+                }
+            }
+        },
+        "weight": {
+            "N": "4"
+        }
+    },
+    {
+        "id": {
+            "S": "5"
+        },
+        "categoryId": {
+            "S": "1"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "With this application can I also see the debit cards that I have in the cooperative?"
+                },
+                "es": {
+                    "S": "¿Con esta aplicación también puedo ver las tarjetas de débito que tengo en la cooperativa?"
+                }
+            }
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "No. My Coop® Card contains only the information of the MasterCard® or VISA® credit cards. The debit card is a card whose funds come from a checking or savings account. To access your checking or savings account information, you need to contact your Credit Union or access your credit union's online banking application."
+                },
+                "es": {
+                    "S": "No. Mi Tarjeta Coop® contiene solo la información de las tarjetas de crédito mastercard® o VISA®. La tarjeta de débito es una tarjeta cuyos fondos provienen de una cuenta de cheques o ahorros. Para acceder la información de sus cuentas de cheques o ahorros, necesita comunicarse con su Cooperativa o acceder la aplicación de banca por internet de su cooperativa."
+                }
+            }
+        },
+        "weight": {
+            "N": "5"
+        }
+    },
+    {
+        "id": {
+            "S": "6"
+        },
+        "categoryId": {
+            "S": "2"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "What does it mean to temporarily block or unblock my card?"
+                },
+                "es": {
+                    "S": "¿Qué significa bloquear temporeramente o desbloquear mi tarjeta?"
+                }
+            }
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "Temporarily blocking your card means that you have disabled the ability of your\n\tcard to process transactions at points of sale,\n\tshops and / or ATMs.Without\n\tHowever,\n\trecurring transactions,\n\tsuch as subscriptions or automatic payments,\n\twill\n\tcontinue to process without interruption\n\twhile the card is disabled.\n\t\n\tPlease note that your card may also be disabled or blocked by the issuing credit union.Some reasons may be due to late payments or security measures related to fraud monitoring and prevention.For more information,\n\tcontact your cooperative."
+                },
+                "es": {
+                    "S": "Bloquear temporeramente su tarjeta significa que usted ha deshabilitado la capacidad de su\n\ttarjeta para procesar transacciones en puntos de ventas,\n\tcomercios y / o cajeros automáticos.Sin\n\tembargo,\n\tlas transacciones periódicas,\n\tcomo las suscripciones o pagos automáticos,\n\tseguirán procesándose sin interrupciones mientras la tarjeta está deshabilitada.\n\t\n\tTenga en cuenta que su tarjeta también puede ser dehabilitada o bloqueada por la cooperativa emisora.Algunas razones pueden ser por pagos atrasados o por medidas de seguridad relacionadas a monitoreo y prevención de fraude.Para más información,\n\tcomuníquese a su cooperativa."
+                }
+            }
+        },
+        "weight": {
+            "N": "6"
+        }
+    },
+    {
+        "id": {
+            "S": "7"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "Why should I temporarily block my credit card?"
+                },
+                "es": {
+                    "S": "¿Por qué debería bloquear temporeramente, mi tarjeta de crédito?"
+                }
+            }
+        },
+        "weight": {
+            "N": "2"
+        },
+        "categoryId": {
+            "S": "2"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "You should use the temporary block option if you identify unauthorized transactions made with your card or if you receive an email or text message informing you that an unauthorized transaction was made by you. You can also use this option if you lose your card, even temporarily.\n\t\n\tThe option to block the card allows you to protect it immediately,\n\tuntil you can determine what happened.If you cannot find it or you receive charges\n\tfor unauthorized transactions,\n\tthen you must report the card as lost,\n\tstolen or compromised,by calling 787 - 641 - 2310 or your Cooperative.You can also contact a service representative via e - mail at: mi Tarjetacoop @bancoop.com.\n\t\n\tSimilarly,if there is a card that you do not use on a recurring basis,it is a good practice to block it until it is time to use it."
+                },
+                "es": {
+                    "S": "Debe utilizar la opción de bloqueo temporero en caso de identificar transacciones no autorizadas realizadas con su tarjeta o si recibe un correo electrónico o mensaje de texto informando que se realizó una transacción no autorizada por usted. También puede utilizar esta opción si extravía su tarjeta, aunque sea temporeramente.\n\t\n\tLa opción de bloquear la tarjeta permite protegerla inmediatamente,\n\thasta tanto pueda determinar qué sucedió.Si no la encuentra o recibe cargos por transacciones no autorizadas entonces hay que reportar la tarjeta como perdida,\n\trobada o comprometida,\n\tllamando al 787 - 641 - 2310 o a su Cooperativa.También puede contactar a un representante de servicio vía correo electrónico a: mitarjetacoop @bancoop.com.\n\t\n\tDe igual forma,\n\tsi hay una tarjeta que no utiliza de forma recurrente,\n\tes una buena práctica bloquear la misma hasta que llegue el momento de utilizarla."
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "8"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "Does temporary card blocking really work instantly?"
+                },
+                "es": {
+                    "S": "¿El bloqueo temporero de tarjetas realmente funciona al instante?"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "2"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "The answer in this case is, it depends. If you have more than one card and they are issued by different cooperatives, when you block a card, this block does not affect the cards issued by other cooperatives. Similarly, if you have cards with different logos, mastercard® or VISA, if you block a card with a logo, for example mastercard®, this will not affect the card with the VISA® logo, and vice versa.\n\t\n\tHowever,\n\tif you have more than one personal credit card issued under the same account number,\n\teven\n\tif they are issued under different names,\n\tonce you block your card,\n\tall credit cards within the same account will be temporarily blocked.\n\t\n\tFor Business credit cards,\n\tyou can disable or block each card within the same account individually."
+                },
+                "es": {
+                    "S": "La respuesta en este caso es, depende. Si tienes más de una tarjeta y son emitidas por distintas cooperativas, cuando bloquees una tarjeta, este bloqueo no afecta las tarjetas emitidas por otras cooperativas. De igual manera, si tienes tarjetas con distintos logos, mastercard® o VISA, si bloqueas una tarjeta de un logo, por ejemplo mastercard®, esto no afectará la tarjeta con el logo de VISA®, y viceversa.\n\t\n\tSin embargo,\n\tsi tienes más de una tarjeta de crédito personal emitida con el mismo número de cuenta,\n\taunque estén emitidas con distintos nombres,\n\tuna vez que bloquee su tarjeta,\n\ttodas las tarjetas de crédito dentro de la misma cuenta se bloquearán temporalmente.\n\t\n\tEn el caso de las tarjetas de crédito Business,\n\tusted puede deshabilitar o bloquear cada tarjeta dentro de una misma cuenta de forma individual."
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "9"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "Can a temporary block to a card affect my other cards in other cooperatives?\n\tof credit ?"
+                },
+                "es": {
+                    "S": "¿Puede un bloqueo temporero a una tarjeta afectar a mis otras tarjetas en otras cooperativas de crédito ?"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "2"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "No. The TEMPORARY BLOCKING of the card is based on the account or card number. Each\n\tcard has a different account number,\n\ttherefore,\n\tthe TEMPORARY BLOCK will be placed only on the card of your choice."
+                },
+                "es": {
+                    "S": "No. El BLOQUEO TEMPORERO de la tarjeta se basa en el número de cuenta o tarjeta. Cada\n\ttarjeta tiene un número de cuenta diferente,\n\tpor lo tanto,\n\tel BLOQUEO TEMPORERO se colocará sólo en la tarjeta de su selección."
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "10"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "How long can the temporary card block last?"
+                },
+                "es": {
+                    "S": "¿Cuánto tiempo puede durar el bloqueo temporero de tarjeta?"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "2"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "As long as you keep the lock option on the app. Only you can block and\n\tunlock your card."
+                },
+                "es": {
+                    "S": "Mientras mantenga la opción de bloqueo en la aplicación. Solo usted puede bloquear y\n\tdesbloquear su tarjeta."
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "11"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "If my card is lost or stolen, should I temporarily block it?"
+                },
+                "es": {
+                    "S": "¿Si mi tarjeta está perdida o fue robada, debo bloquearla temporalmente?"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "3"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "If your card was stolen, lost or lost, you must first block your card and immediately contact 787-641-2310 or a representative of your Cooperative. This will protect you from unauthorized transactions while you apply for a new card.\n\t\n\tIf your card was lost / stolen and you do not report it immediately, you will not be able to claim any\n\ttransaction that was not made or authorized by you or an authorized user.Please close your card immediately."
+                },
+                "es": {
+                    "S": "Si su tarjeta fue robada, esta extraviada o perdida, primero debe bloquear su tarjeta y comunicarse inmediatamente al 787-641-2310 o con un representante de su Cooperativa.  Eso lo protegerá de transacciones no autorizadas mientras tramita una nueva tarjeta.\n\t\n\tSi su tarjeta fue perdida / robada y no la reporta inmediatamente,\n\tno podrá reclamar ninguna\n\ttransacción que no haya sido realizada o autorizada por usted o un usuario autorizado.Por favor,\n\tcierre su tarjeta inmediatamente."
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "12"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "I forgot the user ID or password"
+                },
+                "es": {
+                    "S": "Olvidé el ID de usuario o la contraseña"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "2"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "No problem, just follow the link \n\tNeed help with your username and / or password \" and that's it. You will need to have the social security number, identify if the account is personal or business, the date of birth, mobile phone number and email. In addition, you need to identify the cooperative that issues the card, card number, expiration date and the three digits that are on the back of the card (CVV).\n\t\n\tOnce you enter the data,\n\tMy Coop® Card will send a code to your mobile phone that must be entered in the app.Once the process is completed,\n\tMy Coop® Card will provide you with the registered user in the app or allow you to change your password."
+                },
+                "es": {
+                    "S": "No hay problema, solo tiene que seguir el enlace de ”Necesitas ayuda con tu usuario y/o contraseña” y listo. Necesitará tener el número de seguro social, identificar si la cuenta es personal o comercial, la fecha de nacimiento, número de teléfono móvil y correo electrónico. Además, necesita identificar cuál es la cooperativa que emite la tarjeta, número de la tarjeta, fecha de expiración  y los tres dígitos que están en la parte posterior de la tarjeta (CVV).\n\t\n\tUna vez,\n\tingrese los datos,\n\tMi Tarjeta Coop®,\n\tle enviará un código a su teléfono móvil que deberá ser ingresado en la app.Una vez completado el proceso Mi Tarjeta Coop® le proveerá el usuario registrado en el app o permitirá el cambio de contraseña."
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "13"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "What is dispute a transaction?"
+                },
+                "es": {
+                    "S": "¿Qué es disputar una transacción?"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "3"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "A dispute is a claim for a refund of a payment made or charged to your card.\n\t\n\tThere are multiple reasons why you can dispute a transaction.Here are some examples.\n\t\n\t1. The statement reflects a transaction that was not authorized by me or the persons authorized on my credit card account.\n\t2. You received the defective merchandise or you did not receive the merchandise paid\n\tfor with your credit card.\n\t3. You made the payment using another payment method\n\t4. Canceled reservations,\n\tcomplying with the requirements of the business,\n\thowever,\n\tthey still made the charge.\n\t\n\tFor all the reasons why you could dispute a transaction or charge,\n\tcontact your Credit Union."
+                },
+                "es": {
+                    "S": "Una disputa es una reclamación de devolución de dinero por un pago realizado o cargado a su tarjeta.\n\t\n\tExisten múltiples razones por las cuales puedes reclamar una transacción.A continuación,\n\tle compartimos algunos ejemplos.\n\t\n\t1. El estado de cuenta refleja una transacción que no fue autorizada por mí o por las personas autorizadas en mi cuenta de tarjeta de crédito.\n\t2. Recibió la mercancía defectuosa o no recibió la mercancía pagada con su tarjeta de crédito.\n\t3. Realizó el pago utilizando otro medio de pago\n\t4. Reservaciones canceladas,\n\tcumpliendo con los requisitos del comercio,\n\tsin embargo,\n\taun así realizaron el cargo.\n\t\n\tPara conocer todas las razones por cuales podría reclamar una transacción o cargo,\n\tcomuníquese con su Cooperativa."
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "14"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "How can I pay my credit card?"
+                },
+                "es": {
+                    "S": "¿Cómo puedo pagar mi tarjeta de crédito?"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "3"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "You can make payment to your MasterCard® or VISA credit card using My Coop® Card. You only need to register the account of your financial institution in the APP and set the amount and date of the payment you want to make. An automatic debit will be processed to your account."
+                },
+                "es": {
+                    "S": "Usted podrá realizar pago a su tarjeta de crédito mastercard® o VISA utilizando® Mi Tarjeta Coop®. Solo necesita registrar la cuenta de su institución financiera en la APP y configurar la cantidad y fecha del pago que quiere realizar. Se procesará un débito automático a su cuenta."
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "15"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "How long does it take to credit my payment to my account?"
+                },
+                "es": {
+                    "S": "¿Cuánto tiempo se tarda en acreditar mi pago en mi cuenta?"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "3"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "Payments made through My Coop® Card will be reflected in your account within the next 3 business days."
+                },
+                "es": {
+                    "S": "Los pagos realizados a través Mi Tarjeta Coop®  se verán reflejados en su cuenta en los próximos 3 días laborables."
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "16"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "What happens if I pay my credit card late?"
+                },
+                "es": {
+                    "S": "Qué pasa si pago tarde mi tarjeta de crédito"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "3"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "If you do not make the card payment on the date established in the account statement, your card will be automatically blocked for non-payment."
+                },
+                "es": {
+                    "S": "Si no realiza el pago de la tarjeta en la fecha establecida en el estado de cuenta, su tarjeta será bloqueada automáticamente por falta de pago. "
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "17"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "What are the terms and conditions of my credit card?"
+                },
+                "es": {
+                    "S": "¿Cuáles son los términos y condiciones de mi tarjeta de crédito?"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "3"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "The terms and conditions vary in each Cooperative. For specific details on\n\tthe terms and conditions,\n\tplease contact an authorized representative of your Cooperative"
+                },
+                "es": {
+                    "S": "Los términos y condiciones varían en cada Cooperativa. Para conocer los detalles específicos en\n\tlos términos y condiciones,\n\tfavor de comunicarse con un representante autorizado de su Cooperativa"
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "18"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "Is there a representative I can contact\n\tif I need assistance ?"
+                },
+                "es": {
+                    "S": "¿Hay algún representante que pueda contactar si necesito asistencia ?"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "3"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "If you need additional assistance, you can contact a Mi Tarjeta Coop service representative at 787-641-2310 or via email at: mi Tarjetacoop@bancoop.com"
+                },
+                "es": {
+                    "S": "Si necesitas asistencia adicional puedes comunicarte con un representante de servicio de Mi Tarjeta Coop al 787-641-2310 o vía correo electrónico a: mitarjetacoop@bancoop.com"
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "19"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "What is the ReCoompensa program?"
+                },
+                "es": {
+                    "S": "¿Qué es el programa de ReCoompensa?"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "4"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "For every dollar spent on purchases or ATM withdrawals, you earn one (1) point equal to 1% of the transaction. Certain restrictions apply. For details of the ReCoompensa program, contact your cooperative.\n\t\n\tThe points program\n\tfor the MasterCard Business credit card program varies by Credit Union.To learn about the points program\n\tfor your MasterCard Business,\n\tcontact your credit union."
+                },
+                "es": {
+                    "S": "Por cada dólar en compras o retiros en cajeros automáticos, usted acumula un (1) punto equivalente al 1% de la transacción. Ciertas restricciones aplican. Para obtener detalles del programa de ReCoompensa, comuníquese a su cooprativa.\n\t\n\tEl programa de puntos para el programa de tarjetas de crédito mastercard Business varía por Cooperativa.Para conocer el programa de puntos para su mastercard Business,\n\tcomuníquese a su cooperativa."
+                }
+            }
+        }
+    },
+    {
+        "id": {
+            "S": "20"
+        },
+        "question": {
+            "M": {
+                "en": {
+                    "S": "How can I redeem my ReCoompensa points?"
+                },
+                "es": {
+                    "S": "¿Cómo puedo redimir mis puntos ReCoompensa?"
+                }
+            }
+        },
+        "weight": {
+            "N": "1"
+        },
+        "categoryId": {
+            "S": "4"
+        },
+        "answer": {
+            "M": {
+                "en": {
+                    "S": "Points in the ReCoompensa Program are redeemed for cash. To redeem your points,\n\tYou need to contact a representative of your Cooperative to guide you through the process to follow."
+                },
+                "es": {
+                    "S": "Los puntos en el Programa de ReCoompensa se redimen en efectivo. Para redimir sus puntos,\n\tnecesita contactar un representante de su Cooperativa para que le oriente el proceso a seguir."
+                }
+            }
+        }
+    }
+]

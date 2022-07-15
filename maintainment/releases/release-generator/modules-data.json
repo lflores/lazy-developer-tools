@@ -76,7 +76,7 @@
         "versionType": "maven"
     },
     {
-        "name": "bcpr-middleware-server",
+        "name": "bcpr-dev-middleware-server",
         "description": "",
         "parentFolder": "infra",
         "layer": "backend",

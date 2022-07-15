@@ -1,28 +1,21 @@
 [{
-        "name": "FAQ",
-        "key": "us-east-1"
-    },
-    {
-        "name": "ClaimTypeData",
-        "key": "us-east-1"
+        "name": "CallCenter",
+        "region": "us-east-1"
     },
     {
         "name": "Category",
         "key": "us-east-1"
     },
     {
-        "name": "CallCenter"
+        "name": "ContactUsReason",
+        "region": "us-east-1"
     },
     {
-        "name": "ContactUsReason"
+        "name": "ClaimTypeData",
+        "region": "us-east-1"
     },
     {
-        "name": "ClaimTypeDetails"
-    },
-    {
-        "name": "Wallet"
-    },
-    {
-        "name": "Payment"
+        "name": "FAQ",
+        "key": "us-east-1"
     }
 ]
