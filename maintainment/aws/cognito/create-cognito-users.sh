@@ -88,10 +88,10 @@ ENVIRONMENT=$(cat environment-data.json | jq -c ".[] | select( .environment | co
 log_environment_data $ENVIRONMENT
 
 # Get users from file
-USERS=$(cat users-data.json | jq -c -r '.[]')
+USERS=$(cat users-data-uat.json | jq -c -r '.[]')
 
 if [[ -n $2 ]]; then
-  USER=$(cat users-data.json | jq -c ".[] | select( .username | contains(\"$2\"))")
+  USER=$(cat users-data-uat.json | jq -c ".[] | select( .username | contains(\"$2\"))")
   echo $USER
   create_user \
     $USER \
